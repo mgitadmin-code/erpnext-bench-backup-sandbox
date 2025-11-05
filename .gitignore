@@ -1,0 +1,57 @@
+# ERPNext / Frappe Bench Git Ignore
+
+# Ignore all site-specific data
+sites/*
+
+# But keep shared configs
+!sites/apps.txt
+!sites/common_site_config.json
+
+# Keep static assets (they are needed for front-end)
+!sites/assets/**
+
+# Exclude sensitive site config and backups
+sites/*/site_config.json
+sites/*/private/
+sites/*/public/files/
+sites/*/public/backups/
+sites/*/backups/
+sites/*/error-snapshots/
+sites/*/locks/
+sites/*/logs/
+
+# Virtual environment
+env/
+*.pyc
+__pycache__/
+*.log
+*.DS_Store
+*.swp
+*.sqlite
+node_modules/
+
+# Ignore bench and redis runtime files
+*.pid
+*.sock
+*.db
+redis_data/
+logs/
+config/
+assets/
+*.py~
+*.swp
+
+# Ignore compiled JS/CSS if auto-generated
+*.bundle.js
+*.min.js
+*.map
+*.min.css
+
+# Ignore IDE/project files
+.vscode/
+.idea/
+*.iml
+
+# Ignore OS/system files
+Thumbs.db
+.DS_Store
