@@ -1,49 +1,44 @@
-sites/*
-
-!sites/common_site_config.json
-
-!sites/assets/**
-
-sites/*/site_config.json
-sites/*/private/
-sites/*/public/files/
-sites/*/public/backups/
-sites/*/backups/
-sites/*/error-snapshots/
-sites/*/locks/
-sites/*/logs/
-
-env/
-*.pyc
+# Python
 __pycache__/
-*.log
-*.DS_Store
-*.swp
-*.sqlite
+*.py[cod]
+*.pyo
+*.egg-info/
+.venv/
+env/
+venv/
+
+# Node
 node_modules/
+.npm/
+.eslintcache
 
-# Ignore bench and redis runtime files
-*.pid
-*.sock
-*.db
-redis_data/
-logs/
-config/
-assets/
-*.py~
-*.swp
-
-# Ignore compiled JS/CSS if auto-generated
-*.bundle.js
-*.min.js
-*.map
-*.min.css
-
-# Ignore IDE/project files
-.vscode/
-.idea/
-*.iml
-
-# Ignore OS/system files
-Thumbs.db
+# OS/editor
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Frappe/Bench specifics
+.bench/
+*.log
+sites/*/private/backups/
+sites/*/private/files/
+sites/*/private/logs/
+sites/*/error-snapshots/
+sites/*/logs/
+sites/*/public/backups/
+sites/*/public/files/
+sites/assets/
+assets/
+# DO NOT commit site configs (DB creds & keys)
+sites/*/site_config.json
+sites/common_site_config.json
+
+# Frontend build outputs
+dist/
+build/
+
+# Coverage/pytest
+.coverage
+htmlcov/
+.pytest_cache/
