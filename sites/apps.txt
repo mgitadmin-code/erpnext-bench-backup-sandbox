@@ -1,6 +1,4 @@
 frappe
-frappe
 telephony
-helpdesk
 helpdesk
 erpnext

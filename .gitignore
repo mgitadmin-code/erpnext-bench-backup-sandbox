@@ -42,3 +42,11 @@ build/
 .coverage
 htmlcov/
 .pytest_cache/
+
+# Ignore all site data except apps.txt
+sites/*
+!sites/apps.txt
+
+# Ignore bench logs and env-specific configs
+logs/
+config/
